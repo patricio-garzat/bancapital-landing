@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
+<script>(function(){try{var t=localStorage.getItem('bancapital-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacidad de BanCapital</title>
@@ -70,7 +71,15 @@ body{
 .back-link{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--text-tertiary);text-decoration:none;margin-bottom:20px;}
 .back-link:hover{color:var(--accent);}
 .back-link svg{width:14px;height:14px;}
-.brand{display:flex;align-items:center;gap:10px;margin-bottom:40px;}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:40px;}
+.theme-toggle{position:relative;width:56px;height:30px;flex:0 0 auto;border-radius:20px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 6px;cursor:pointer;}
+.theme-toggle-icon{position:relative;z-index:2;width:15px;height:15px;display:flex;align-items:center;justify-content:center;color:var(--text-tertiary);transition:color .2s ease;}
+.theme-toggle-icon svg{width:13px;height:13px;}
+.theme-toggle-icon.sun{color:#FAFFF7;}
+.theme-toggle.is-dark .theme-toggle-icon.sun{color:var(--text-tertiary);}
+.theme-toggle.is-dark .theme-toggle-icon.moon{color:#fff;}
+.theme-toggle-thumb{position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--accent);z-index:1;transition:transform .25s cubic-bezier(.2,.8,.2,1);}
+.theme-toggle.is-dark .theme-toggle-thumb{transform:translateX(26px);}
 .brand-mark{width:34px;height:34px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
 .brand-mark svg{width:100%;height:100%;display:block;}
 .brand-name{font-weight:900;font-size:26px;letter-spacing:-.01em;background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;color:transparent;}
@@ -103,6 +112,11 @@ footer{margin-top:48px;color:var(--text-tertiary);font-size:12.5px;}
   <a class="back-link" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>bancapital.app</a>
   <div class="brand">
     <div class="brand-name">BanCapital</div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+      <span class="theme-toggle-thumb"></span>
+      <span class="theme-toggle-icon sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></span>
+      <span class="theme-toggle-icon moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg></span>
+    </button>
   </div>
 
   <h1>Política de Privacidad</h1>
@@ -160,5 +174,24 @@ footer{margin-top:48px;color:var(--text-tertiary);font-size:12.5px;}
 
   <footer>BanCapital es una app 100% local — no requiere internet para funcionar.</footer>
 </div>
+<script>
+(function(){
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  function isDark(){ return root.getAttribute('data-theme') === 'dark'; }
+  function sync(){
+    var dark = isDark();
+    toggle.classList.toggle('is-dark', dark);
+    toggle.setAttribute('aria-label', dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+  }
+  toggle.addEventListener('click', function(){
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem('bancapital-theme', next); }catch(e){}
+    sync();
+  });
+  sync();
+})();
+</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
+<script>(function(){try{var t=localStorage.getItem('bancapital-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BanCapital — Todas tus finanzas en una sola app</title>
@@ -363,9 +364,7 @@ footer p{font-size:13px;color:var(--text-tertiary);max-width:46ch;}
   var root = document.documentElement;
   var toggle = document.getElementById('themeToggle');
   function isDark(){
-    var explicit = root.getAttribute('data-theme');
-    if(explicit) return explicit === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return root.getAttribute('data-theme') === 'dark';
   }
   function sync(){
     var dark = isDark();
@@ -373,7 +372,9 @@ footer p{font-size:13px;color:var(--text-tertiary);max-width:46ch;}
     toggle.setAttribute('aria-label', dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
   }
   toggle.addEventListener('click', function(){
-    root.setAttribute('data-theme', isDark() ? 'light' : 'dark');
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem('bancapital-theme', next); }catch(e){}
     sync();
   });
   sync();
