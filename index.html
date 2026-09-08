@@ -181,6 +181,14 @@ header{position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--bg) 
 .feature-card h3{font-size:17px;font-weight:800;}
 .feature-card p{font-size:14.5px;color:var(--text-secondary);line-height:1.55;}
 
+/* ---- Nota: no es un banco ---- */
+.disclaimer{padding:0 0 88px;}
+.disclaimer-card{max-width:760px;margin:0 auto;display:flex;gap:20px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius-md);padding:28px 30px;box-shadow:var(--shadow-sm);}
+.disclaimer-icon{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.disclaimer-icon svg{width:20px;height:20px;}
+.disclaimer-card h3{font-size:16.5px;font-weight:800;margin-bottom:6px;}
+.disclaimer-card p{font-size:14.5px;color:var(--text-secondary);line-height:1.6;max-width:58ch;}
+
 /* ---- CTA final ---- */
 .final-cta{padding:88px 0;}
 .final-cta-inner{background:var(--gradient-brand);border-radius:var(--radius-lg);padding:64px 32px;text-align:center;color:#FAFFF7;}
@@ -338,6 +346,18 @@ footer p{font-size:13px;color:var(--text-tertiary);max-width:46ch;}
         <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></div>
         <h3>Respaldo bajo tu control</h3>
         <p>Exporta o importa toda tu información cuando quieras, sin depender de ninguna nube.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="disclaimer">
+  <div class="wrap">
+    <div class="disclaimer-card">
+      <div class="disclaimer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5"/><circle cx="12" cy="8" r=".5" fill="currentColor" stroke="none"/></svg></div>
+      <div>
+        <h3>Es un registro, no un banco</h3>
+        <p>BanCapital no está conectada a tu banco ni a tus tarjetas: no ve tus movimientos reales ni mueve tu dinero. Cuando anotas un ingreso, un gasto o marcas el pago de una tarjeta, solo estás actualizando tu propio registro — el pago real siempre lo tienes que hacer directamente con tu banco o el emisor de tu tarjeta.</p>
       </div>
     </div>
   </div>
