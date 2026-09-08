@@ -70,6 +70,9 @@ body{
   line-height:1.55;
 }
 .wrap{max-width:680px;margin:0 auto;padding:56px 24px 96px;}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--text-tertiary);text-decoration:none;margin-bottom:20px;}
+.back-link:hover{color:var(--accent);}
+.back-link svg{width:14px;height:14px;}
 .brand{display:flex;align-items:center;gap:10px;margin-bottom:40px;}
 .brand-name{font-weight:900;font-size:26px;letter-spacing:-.01em;background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;color:transparent;}
 h1{font-size:clamp(28px,5vw,36px);font-weight:900;letter-spacing:-.02em;line-height:1.1;text-wrap:balance;margin:0 0 8px;}
@@ -94,6 +97,7 @@ footer a{color:var(--text-tertiary);}
 </head>
 <body>
 <div class="wrap">
+  <a class="back-link" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>bancapital.app</a>
   <div class="brand">
     <div class="brand-name">BanCapital</div>
   </div>
