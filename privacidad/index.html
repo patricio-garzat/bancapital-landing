@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad de BanCapital</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1024 1024%22><defs><linearGradient id=%22bg%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%2356B818%22/><stop offset=%221%22 stop-color=%22%239EF669%22/></linearGradient></defs><rect width=%221024%22 height=%221024%22 rx=%22220%22 fill=%22url(%23bg)%22/><text x=%22512%22 y=%22545%22 font-family=%22sans-serif%22 font-weight=%22900%22 font-size=%22620%22 fill=%22%23FAFFF7%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>B</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F6F2;
+  --card:#FFFFFF;
+  --card-hover:#FCFBF8;
+  --border:#E7E4DC;
+  --text:#1C1C1E;
+  --text-secondary:#75757C;
+  --text-tertiary:#A5A5AC;
+  --accent:#56B818;
+  --accent-soft:#EAF8E4;
+  --gradient-brand:linear-gradient(135deg,#56B818,#9EF669);
+  --success:#1D9A6C;
+  --success-soft:#E8F6EF;
+  --shadow:0 1px 2px rgba(20,20,25,0.04), 0 1px 1px rgba(20,20,25,0.03);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141417;
+    --card:#1E1E23;
+    --card-hover:#232329;
+    --border:#302F36;
+    --text:#F3F3F5;
+    --text-secondary:#9C9CA5;
+    --text-tertiary:#6C6C74;
+    --accent:#8CE05A;
+    --accent-soft:#1D3512;
+    --success:#3CC492;
+    --success-soft:#173229;
+    --shadow:0 1px 2px rgba(0,0,0,0.3);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141417;
+  --card:#1E1E23;
+  --card-hover:#232329;
+  --border:#302F36;
+  --text:#F3F3F5;
+  --text-secondary:#9C9CA5;
+  --text-tertiary:#6C6C74;
+  --accent:#8CE05A;
+  --accent-soft:#1D3512;
+  --success:#3CC492;
+  --success-soft:#173229;
+  --shadow:0 1px 2px rgba(0,0,0,0.3);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Lato',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+.wrap{max-width:680px;margin:0 auto;padding:56px 24px 96px;}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:40px;}
+.brand-mark{width:34px;height:34px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.brand-mark svg{width:100%;height:100%;display:block;}
+.brand-name{font-weight:900;font-size:26px;letter-spacing:-.01em;background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;color:transparent;}
+h1{font-size:clamp(28px,5vw,36px);font-weight:900;letter-spacing:-.02em;line-height:1.1;text-wrap:balance;margin:0 0 8px;}
+.updated{color:var(--text-tertiary);font-size:13.5px;margin-bottom:32px;font-variant-numeric:tabular-nums;}
+.summary{background:linear-gradient(135deg,var(--accent-soft),var(--card));border:1px solid var(--border);border-radius:20px;padding:24px 26px;margin-bottom:40px;box-shadow:var(--shadow);}
+.summary-label{font-size:12.5px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
+.summary p{margin:0;font-size:17px;font-weight:700;letter-spacing:-.01em;text-wrap:balance;}
+section{margin-bottom:34px;}
+section:last-of-type{margin-bottom:0;}
+h2{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:0 0 10px;}
+p{margin:0 0 12px;color:var(--text);font-size:15px;max-width:60ch;}
+p:last-child{margin-bottom:0;}
+p.muted{color:var(--text-secondary);}
+.check-list{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;}
+.check-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;}
+.check-list .dot{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--success-soft);color:var(--success);display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.check-list svg{width:12px;height:12px;}
+.data-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-top:6px;}
+.data-card dl{margin:0;display:flex;flex-direction:column;gap:10px;}
+.data-card .row{display:flex;gap:14px;font-size:14.5px;}
+.data-card dt{flex:0 0 128px;font-weight:600;color:var(--text-secondary);}
+.data-card dd{margin:0;color:var(--text);}
+.divider{height:1px;background:var(--border);margin:34px 0;}
+footer{margin-top:48px;color:var(--text-tertiary);font-size:12.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="brand-name">BanCapital</div>
+  </div>
+
+  <h1>Política de Privacidad</h1>
+  <div class="updated">Última actualización: 7 de septiembre de 2026</div>
+
+  <div class="summary">
+    <div class="summary-label">En una frase</div>
+    <p>BanCapital no recolecta, no envía a ningún servidor ni comparte tu información con nadie. Todo lo que registras se queda guardado únicamente en tu teléfono.</p>
+  </div>
+
+  <section>
+    <h2>Lo que no hacemos</h2>
+    <ul class="check-list">
+      <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>No hay cuentas, registro ni inicio de sesión.</li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>No hay servidores ni base de datos remota: BanCapital nunca envía tu información a internet.</li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>No usamos analíticas, rastreo de comportamiento ni publicidad.</li>
+      <li><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>No compartimos, vendemos ni transmitimos tu información a terceros.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Qué información maneja BanCapital</h2>
+    <p>BanCapital es una app de finanzas personales que funciona por completo dentro de tu teléfono. La información que tú decides capturar se guarda en el almacenamiento local de la app:</p>
+    <div class="data-card">
+      <dl>
+        <div class="row"><dt>Movimientos</dt><dd>Tus ingresos, gastos y pagos de tarjeta, con fecha, categoría y descripción.</dd></div>
+        <div class="row"><dt>Tarjetas</dt><dd>Nombre, límite de crédito, fecha de corte y fecha límite de pago de las tarjetas que tú agregues.</dd></div>
+        <div class="row"><dt>Foto de tarjeta</dt><dd>Si tú eliges una imagen de tu carrete para usarla como ícono de una tarjeta, esa imagen se guarda igual, solo en tu dispositivo.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <h2>Acceso a tu carrete de fotos</h2>
+    <p>BanCapital pide permiso para acceder a tus fotos únicamente en el momento en que tú decides ponerle una imagen a una tarjeta, desde Tarjetas → Editar tarjeta. La foto que elijas se guarda solo en tu dispositivo; BanCapital nunca la sube a internet, ni la comparte con nosotros ni con nadie más.</p>
+  </section>
+
+  <section>
+    <h2>Cómo eliminar tu información</h2>
+    <p>Tú tienes el control total, en cualquier momento:</p>
+    <div class="data-card">
+      <dl>
+        <div class="row"><dt>Borrar todo</dt><dd>Configuración → Datos → Reiniciar aplicación.</dd></div>
+        <div class="row"><dt>Desinstalar</dt><dd>Al borrar la app de tu teléfono se elimina toda la información guardada junto con ella.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Cambios a esta política</h2>
+    <p class="muted">Si algo cambia en cómo BanCapital maneja la información, esta misma página se actualizará con una nueva fecha arriba.</p>
+  </section>
+
+  <footer>BanCapital es una app 100% local — no requiere internet para funcionar.</footer>
+</div>
+</body>
+</html>
