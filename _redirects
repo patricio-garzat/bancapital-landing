@@ -1,0 +1,4 @@
+# Enlace universal del boton "Abrir la app" (https://go.bancapital.app/abrir):
+# - con la app instalada, iOS la abre directo y esta regla ni se consulta;
+# - sin la app (o en escritorio/Android), cae aqui y se manda a la App Store.
+/abrir  https://apps.apple.com/app/id6809677995  302

@@ -78,6 +78,8 @@
 :root[data-theme="dark"] .final-cta-inner h2{color:#0E2404;}
 :root[data-theme="dark"] .final-cta-inner p{color:#193807;}
 :root[data-theme="dark"] .final-cta-inner .hero-cta-note{color:#1E3616;opacity:.75;}
+:root[data-theme="dark"] .final-cta-inner .btn-outline{color:#0E2404;box-shadow:inset 0 0 0 1.5px rgba(14,36,4,.55);}
+:root[data-theme="dark"] .final-cta-inner .btn-outline:hover{color:#0E2404;box-shadow:inset 0 0 0 1.5px #0E2404;background:rgba(14,36,4,.08);}
 *,*::before,*::after{box-sizing:border-box;}
 html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
 body{
@@ -102,6 +104,9 @@ p{margin:0;}
 .btn-primary:hover{box-shadow:var(--shadow-lg);}
 .btn-ghost{background:var(--card);color:var(--text);border:1px solid var(--border);}
 .btn-inverse{background:#FAFFF7;color:#1E3616;}
+.btn-outline{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--border);}
+.btn-outline:hover{box-shadow:inset 0 0 0 1.5px var(--accent);color:var(--accent);}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px;}
 .btn-sm{padding:9px 18px;font-size:14px;}
 .btn-icon{width:16px;height:16px;flex:0 0 auto;}
 
@@ -194,7 +199,8 @@ header{position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--bg) 
 .final-cta-inner{background:var(--gradient-brand);border-radius:var(--radius-lg);padding:64px 32px;text-align:center;color:#FAFFF7;}
 .final-cta-inner h2{font-size:clamp(28px,4.4vw,40px);color:#FAFFF7;}
 .final-cta-inner p{margin-top:14px;font-size:16.5px;color:rgba(250,255,247,.88);max-width:52ch;margin-left:auto;margin-right:auto;}
-.final-cta-inner .btn-inverse{margin-top:28px;}
+.final-cta-inner .btn-outline{color:#FAFFF7;box-shadow:inset 0 0 0 1.5px rgba(250,255,247,.75);}
+.final-cta-inner .btn-outline:hover{color:#FAFFF7;box-shadow:inset 0 0 0 1.5px #FAFFF7;background:rgba(250,255,247,.12);}
 .final-cta-inner .hero-cta-note{margin-top:12px;color:rgba(250,255,247,.8);opacity:1;}
 
 /* ---- Footer ---- */
@@ -233,6 +239,7 @@ footer p{font-size:13px;color:var(--text-tertiary);max-width:46ch;}
       <p class="lead">BanCapital es la app para llevar tus ingresos, tus gastos y tus tarjetas de crédito — incluyendo tus compras a meses sin intereses — sin crear una cuenta ni mandar un solo dato a internet.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="https://apps.apple.com/app/id6809677995" target="_blank" rel="noopener">Descargar BanCapital</a>
+        <a class="btn btn-outline" href="https://go.bancapital.app/abrir" rel="noopener">Abrir la app</a>
         <span class="hero-cta-note">Gratis · Disponible para iPhone</span>
       </div>
       <div class="trust-chips">
@@ -368,7 +375,10 @@ footer p{font-size:13px;color:var(--text-tertiary);max-width:46ch;}
     <div class="final-cta-inner">
       <h2>Empieza a llevar el control.</h2>
       <p>BanCapital ya está disponible. Descárgala gratis y ten todas tus finanzas en orden, en una sola app.</p>
-      <a class="btn btn-inverse" href="https://apps.apple.com/app/id6809677995" target="_blank" rel="noopener">Descargar BanCapital</a>
+      <div class="cta-row">
+        <a class="btn btn-inverse" href="https://apps.apple.com/app/id6809677995" target="_blank" rel="noopener">Descargar BanCapital</a>
+        <a class="btn btn-outline" href="https://go.bancapital.app/abrir" rel="noopener">Abrir la app</a>
+      </div>
       <div class="hero-cta-note">Gratis · Disponible para iPhone</div>
     </div>
   </div>

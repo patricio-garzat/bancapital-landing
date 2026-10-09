@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["CGW77RJS5Q.com.bancapital.finanzas"],
+        "components": [
+          { "/": "/abrir", "comment": "Boton 'Abrir la app' de la landing: abre BanCapital si esta instalada" }
+        ]
+      }
+    ]
+  }
+}
